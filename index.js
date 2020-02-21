@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 // function
 app.get("/", (req, res) => {
-	res.send({ hi: "there" });
+	res.send({ hi: "there. Yay" });
 });
 // dynamically figure out which port to listen to
 // Heroku injects runtime environment variable
