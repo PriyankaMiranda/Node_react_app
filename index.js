@@ -11,4 +11,4 @@ app.get("/", (req, res) => {
 //catch case(500) is for when we are testing in our local system
 const PORT = process.env.PORT || 5000;
 // specify port
-app.listen(5000);
+app.listen(PORT);
