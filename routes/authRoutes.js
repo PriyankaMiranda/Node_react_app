@@ -13,7 +13,10 @@ module.exports = app => {
 	// route handler for auth/google/callback
 	// we send it back to passport but this time we also send the code
 	// this was google cofirms the approval
-	app.get("/auth/google/callback", passport.authenticate("google"));
+	app.get(
+		"/auth/google/callback",
+		passport.authenticate("google", { scope: ["profile", "email"] })
+	);
 
 	// log out handler
 	app.get("/api/logout", (req, res) => {
