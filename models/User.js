@@ -6,5 +6,5 @@ const userSchema = new Schema({
 	googleId: String,
 	name: String
 });
-//it creates a new collection called users with the following schema
+// it creates a new collection called users with the following schema
 mongoose.model("users", userSchema);

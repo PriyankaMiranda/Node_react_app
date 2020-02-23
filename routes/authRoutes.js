@@ -14,4 +14,15 @@ module.exports = app => {
 	// we send it back to passport but this time we also send the code
 	// this was google cofirms the approval
 	app.get("/auth/google/callback", passport.authenticate("google"));
+
+	// log out handler
+	app.get("/api/logout", (req, res) => {
+		req.logout();
+		res.send(req.user);
+	});
+
+	// shows user data
+	app.get("/api/current_user", (req, res) => {
+		res.send(req.user);
+	});
 };
